@@ -3,6 +3,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
 const Contact = () => {
 
@@ -80,6 +81,26 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+            </div>
+            <div className='info-map'>
+                Souleymane DIALLO,
+                <br />
+                <span className='profil'>Developpeur Frontend,</span>
+                <br />
+                Rufisque, Dakar,
+                <br />
+                Sénégal <b />
+                <span className='email'>sdley2020@gmail.com</span>
+            </div>
+            <div className='enveloppe-map'>
+                <MapContainer center={[14.742376052593402, -17.275769067723655]} zoom={12}>
+                    <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+                    <Marker position={[14.742376052593402, -17.275769067723655]}>
+                        <Popup>
+                            Souleymane habite ici ! Il serait très heureux de vous voir lui rendre visite...
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </div>
             <Loader type='pacman' />
         </>

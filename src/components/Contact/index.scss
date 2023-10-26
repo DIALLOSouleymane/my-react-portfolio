@@ -68,3 +68,54 @@
         border-radius: 4px;
     }
 }
+
+.info-map {
+    position: absolute;
+    background: rgba($color: #000000, $alpha: 0.7);
+    top: 0%;
+    right: 0%;
+    z-index: 999999; //notre map doit etre au dessus de tout !
+    width: 200px;
+    height: 130px;
+    padding: 20px;
+    color: #fff;
+    font-family: 'Helvetica';
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s;
+    animation-fill-mode: forwards;
+
+    .email {
+        font-size: 18px;
+        display: block;
+        padding-top: 5px;
+        color: #ffd700;
+    }
+}
+
+.enveloppe-map {
+    background: rgba(8, 253, 216, 0.1);
+    float: right;
+    width: 53%;
+    height: 100%;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0; // pour le fadeIn 
+    animation: backInRight 1s 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.profil {
+    color: dodgerblue;
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 11px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+}
