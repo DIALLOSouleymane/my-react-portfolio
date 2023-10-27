@@ -1,0 +1,40 @@
+{
+    "myPortfolio": [
+        {
+            "image": "/portfolio/p1/4-angular-logo.png",
+            "titre": "SnapFace",
+            "description": "Description du projet",
+            "technologies": "TypeScript, HTML, SCSS",
+            "url": "https://google.com"
+        },
+        {
+            "image": "/portfolio/p1/4-angular-logo.png",
+            "titre": "SnapFace",
+            "description": "Description du projet",
+            "technologies": "TypeScript, HTML, SCSS",
+            "url": "https://google.com"
+        },
+        {
+            "image": "/portfolio/p1/4-angular-logo.png",
+            "titre": "SnapFace",
+            "description": "Description du projet",
+            "technologies": "TypeScript, HTML, SCSS",
+            "url": "https://google.com"
+        },
+        {
+            "image": "/portfolio/p1/4-angular-logo.png",
+            "titre": "SnapFace",
+            "description": "Description du projet",
+            "technologies": "TypeScript, HTML, SCSS",
+            "url": "https://google.com"
+        },
+        {
+            "image": "/portfolio/p1/4-angular-logo.png",
+            "titre": "SnapFace",
+            "description": "Description du projet",
+            "technologies": "TypeScript, HTML, SCSS",
+            "url": "https://google.com"
+        }
+        
+    ]
+}
