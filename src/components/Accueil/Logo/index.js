@@ -42,7 +42,7 @@ const Logo = () => {
         className="solid-logo"
         ref={solidLogoRef}
         src={LogoS}
-        alt="JavaScript,  Developer"
+        alt="Developpeur Frontend"
       />
 
       <svg
