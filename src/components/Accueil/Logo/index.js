@@ -56,6 +56,7 @@ const Logo = () => {
           className="svg-container"
           transform="translate(0 457) scale(.1 -.1)"
           fill="#ffd700" // Couleur du svg - notre couleur "yellow"
+
         >
           <path
             ref={outlineLogoRef}
