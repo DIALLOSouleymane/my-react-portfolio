@@ -5,6 +5,9 @@ import AnimatedLetters from "../AnimatedLetters";
 import { useState } from "react";
 import portfolioData from '../../data/portfolio.json';
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const MyPorfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -34,6 +37,9 @@ const MyPorfolio = () => {
                                     <h2 className="titre">{portfolioObject.titre}</h2>
                                     <p className="description">{portfolioObject.description}</p>
                                     <h4 className="technologie">Technologies : {portfolioObject.technologies}</h4>
+                                    <a className="lien-gitHub" href={portfolioObject.url} target="_blank">
+                                        <FontAwesomeIcon icon={faGithub} color="#portfolioObject.url" />
+                                    </a>
                                     <button className="btn" onClick={() => window.open(portfolioObject.url)}>Voir</button>
                                 </div>
                             </div>
