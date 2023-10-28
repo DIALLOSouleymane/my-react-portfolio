@@ -170,9 +170,22 @@
             margin-left: 10px;
         }
 
-        a svg {
+        /* a svg {
             // Nous voulons ici ajouter du texte dynamiquement à coté des icones
-            opacity: 1 !important;
+            opacity: 0.2 !important;
+        } */
+        a {
+            &:hover {
+                color: #ffd700;
+    
+                svg {
+                    opacity: 0.3 !important;
+                }
+    
+                &:after {
+                    opacity: 1;
+                }
+            }
         }
 
         &.mobile-show {

@@ -113,3 +113,18 @@
         }
     }
 }
+
+// Responsivité avec les medias queries
+@media screen and (max-width: 1200px) {
+    // Nous retirons principalement la position fixe des éléments
+
+    .page {
+        position: initial;
+    }
+
+    .container {
+        position: initial;
+        height: auto;
+        min-height: auto;
+    }
+}
