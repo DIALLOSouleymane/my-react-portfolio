@@ -125,3 +125,69 @@
         }
     }
 }
+
+.hamburger-icon,
+.close-mobile-navBar {
+    // L'icone du menu ou encore celle de fermeture du menu ne seront visibles que sur les petits écrans
+    display: none;
+}
+
+// Implémentation de la responsivité du site
+@media screen and (max-width: 1200px) {
+    .nav-bar {
+        background: transparent;
+        position: initial;
+        height: auto; // prend seulement la hauteur du contenu
+        min-height: auto;
+
+        ul, nav {
+            display: none;
+            // Là, nous ne voulons plus afficher les liens vers nos réseaux sociaux sur les petits écrans
+        }
+    }
+
+    nav {
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #181818;
+        height: 100%;
+        margin: 0;
+        z-index: 2;
+        position: fixed;
+
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        a:after {
+            opacity: 1;
+            position: initial;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        a svg {
+            // Nous voulons ici ajouter du texte dynamiquement à coté des icones
+            opacity: 1 !important;
+        }
+
+        &.mobile-show {
+            display: block;
+        }
+    }
+
+    .hamburger-icon,
+    .close-mobile-navBar {
+        display: block;
+        position: absolute;
+        // Nous la plaçons au coté supérieur droit
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+  }
