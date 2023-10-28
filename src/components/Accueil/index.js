@@ -9,9 +9,10 @@ import Loader from 'react-loaders';
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const nameArray = ['o', 'u', 'l', 'e', 'y', 'm', 'a', 'n', 'e', ','];
-    const jobArray = ['J', 'e', ' ', 's', 'u', 'i', 's', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'p', 'e', 'u', 'r', '.'];
+    const jobArray = [' ',' ',' ','J', 'e', ' ', 's', 'u', 'i', 's', ' ', 'd', 'e', 
+                                    'v', 'e', 'l', 'o', 'p', 'p', 'e', 'u', 'r', '.'];
     const helloArray = ['o', 'n', 'j', 'o', 'u', 'r', ','];
-    const introArray = ['j', 'e', ' ', 'm\'', 'a', 'p', 'p', 'e', 'l', 'l', 'e'];
+    const introArray = ['  ',' ','j', 'e', ' ', 'm\'', 'a', 'p', 'p', 'e', 'l', 'l', 'e'];
 
     useEffect(() => {
         setTimeout(() => {
@@ -27,16 +28,16 @@ const Home = () => {
                         {/* Bonjour, <br />
                         je m'appelle<br /> */}
                         <span className={letterClass}>B</span>
-                        <AnimatedLetters letterClass={letterClass} strArray={helloArray} index={1} /><br />
-                        <AnimatedLetters letterClass={letterClass} strArray={introArray} index={8} /> <br />
+                        <AnimatedLetters letterClass={letterClass} strArray={helloArray} index={15} /><br />
+                        <AnimatedLetters letterClass={letterClass} strArray={introArray} index={15} /><br />
                         <img src={LogoTitle} alt='S' />
                         <AnimatedLetters letterClass={letterClass}
                         strArray={nameArray}
-                        index={19} />
+                        index={15} />
                         <br />
                         <AnimatedLetters letterClass={letterClass}
                         strArray={jobArray}
-                        index={30} />
+                        index={15} />
                         <br />
                     </h1>
                     <h2>Developpeur Frontend / Developpeur Logiciel / Administrateur des Bases de Données</h2>
