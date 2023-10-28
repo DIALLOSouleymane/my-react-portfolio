@@ -127,3 +127,24 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .container.portfolio-page {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        // cette déclaration ci-dessus empêche le défilement horizontal
+
+        h1.page-title {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .image-box {
+            height: 250px;
+            // min-width: calc(40% - 10px);
+            min-width: 200px;
+            max-width: calc(50% - 20px);
+        }
+    }
+}
