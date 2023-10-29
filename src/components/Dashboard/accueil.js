@@ -17,6 +17,17 @@ const Home = () => {
         const gitHubLink = fromulaire.current[4]?.value;
         const image = fromulaire.current[5]?.files[0];
         // Nous récupérons le premier fichier attaché
+        /* 
+        if (fromulaire.current[5]?.files[0]){
+              
+                // Nous prenons garde dans le cas où image n'est pas renseignée ;
+                // Dans ce cas précis, nous utiliserons une image par défaut !
+             
+            const image = fromulaire.current[5]?.files[0];
+        }else {
+            const image = 'https://jenesuispasparfaiteetalors.files.wordpress.com/2018/01/projet-de-loi-el-khomri-et-si-les-cles-de-la-gestion-de-projet-et-de-la-conduite-du-changement-en-entreprise-avaient-ete-utilisees.jpg?w=764' ;
+        } 
+        */
 
         // console.log(titre, description, technoligies, websiteLink, gitHubLink, image);
         // créons maintenant une référence à notre espace de stockage
@@ -83,14 +94,14 @@ const Home = () => {
 
     return (
         <div className="dashboard">
-            <form ref={fromulaire} onSubmit={soumissionPortfolio}>
+            <form ref={fromulaire}>
                 <p><input type="text" placeholder="Titre du projet : " /></p>
                 <p><textarea placeholder="Description du Projet : " /></p>
                 <p><input type="text" placeholder="Technologies utilisées : " /></p>
                 <p><input type="text" placeholder="Lien vers le site : " /></p>
                 <p><input type="text" placeholder="Lien du code source (GitHub) : " /></p>
                 <p><input type="file" placeholder="Image (aperçu) du projet" /></p>
-                <button type="submit">Ajouter le projet</button>
+                <button type="submit" onClick={soumissionPortfolio}>Ajouter le projet</button>
                 <button onClick={() => auth.signOut()}>Se Déconnecter</button>
             </form>
         </div>

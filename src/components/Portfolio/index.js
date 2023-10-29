@@ -3,15 +3,18 @@ import './index.scss';
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import { useState } from "react";
-import portfolioData from '../../data/portfolio.json';
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { getDocs, collection } from "firebase/firestore/lite";
+import { db } from "../../myFirebase";
 
 const MyPorfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     // console.log(portfolioData);
+
+    // Récupération des données du portfolio à partir du db
+    const [portfolio, setPortfolio] = useState([]);
 
     // implémentation de l'effet au survolement des lettres du titre
     useEffect(() => {
@@ -22,6 +25,20 @@ const MyPorfolio = () => {
             clearTimeout(minuteur);
         }
     });
+
+    // Appel de la methode getPortfolio
+    useEffect(() => {
+        getPortfolio();
+    }, []);
+    const getPortfolio = async () => {
+        const requetePortfolio = await getDocs(collection(db, 'portfolio'));
+        // request type : querySnapshot ***
+        // console.log(requetePortfolio);
+        setPortfolio(requetePortfolio.docs.map((doc) => doc.data()));
+    }
+
+    // Test de fonctionnement
+    // console.log(portfolio);
 
     const genererPortfolio = (portfolio) => {
         return (
@@ -36,11 +53,12 @@ const MyPorfolio = () => {
                                 <div className="contenu">
                                     <h2 className="titre">{portfolioObject.titre}</h2>
                                     <p className="description">{portfolioObject.description}</p>
-                                    <h4 className="technologie">Technologies : {portfolioObject.technologies}</h4>
-                                    <a className="lien-gitHub" href={portfolioObject.url} target="_blank">
-                                        <FontAwesomeIcon icon={faGithub} color="#portfolioObject.url" />
+                                    <h4 className="technologie">Technologies : {portfolioObject.technoligies}</h4> 
+                                    {/* erreur de frappe : technoligies => technologies */}
+                                    <a className="lien-gitHub" href={portfolioObject.gitHubLink} target="_blank">
+                                        <FontAwesomeIcon icon={faGithub} />
                                     </a>
-                                    <button className="btn" onClick={() => window.open(portfolioObject.url)}>Voir</button>
+                                    <button className="btn" onClick={() => window.open(portfolioObject.websiteLink)}>Voir</button>
                                 </div>
                             </div>
                         )
@@ -59,7 +77,7 @@ const MyPorfolio = () => {
                         index={15}
                     />
                 </h1>
-                <div>{genererPortfolio(portfolioData.myPortfolio)}</div>
+                <div>{genererPortfolio(portfolio)}</div>
             </div>
             <Loader type='pacman'></Loader>
         </>
