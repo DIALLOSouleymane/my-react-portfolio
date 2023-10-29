@@ -1,6 +1,8 @@
 import { useRef } from "react";
-import { auth, stockage } from "../../myFirebase";
+import { auth, db, stockage } from "../../myFirebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { addDoc, collection } from "firebase/firestore/lite";
+
 
 const Home = () => {
     // Nous créons maintenant une référence au formulaire
@@ -67,8 +69,15 @@ const Home = () => {
     }
 
     // Méthode de sauvegarde de notre portfolio
-    const savePortfolio = (portfolio) => {
-        console.log(portfolio);
+    const savePortfolio = async (portfolio) => {
+        // console.log(portfolio);
+        try {
+            await addDoc(collection(db, 'portfolio'), portfolio);
+            // Nous rechargeons maintenant la page afin que les données saisies disparaissent
+            window.location.reload(false);
+        } catch (error) {
+            alert("L'ajout du nouveau projet a échoué, veuillez réessayer !")
+        }
     }
 
 
