@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { auth } from "../../myFirebase";
+import { auth, stockage } from "../../myFirebase";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 
 const Home = () => {
     // Nous créons maintenant une référence au formulaire
@@ -15,8 +16,62 @@ const Home = () => {
         const image = fromulaire.current[5]?.files[0];
         // Nous récupérons le premier fichier attaché
 
-        console.log(titre, description, technoligies, websiteLink, gitHubLink, image);
+        // console.log(titre, description, technoligies, websiteLink, gitHubLink, image);
+        // créons maintenant une référence à notre espace de stockage
+        const stockageRef = ref(stockage, `portfolio/${image.name}`);
+
+        /* 
+             Nous envoyons à présent notre image au serveur;
+            Pour cela, nous utilisons la méthode uploadBytes fourni par le firebase
+         */
+        uploadBytes(stockageRef, image).then(
+            (snapshot) => {
+                getDownloadURL(snapshot.ref).then((downloadUrl) => {
+                    savePortfolio({
+                        titre,
+                        description,
+                        technoligies,
+                        websiteLink,
+                        gitHubLink,
+                        image: downloadUrl
+                    })
+                }, () => {
+                    /* 
+                        Dans le cas où le téléchargement de l'image à partir du serveur échoue,
+                        dans ce cas, l'image ne sera affichée
+                    */
+                    savePortfolio({
+                        titre,
+                        description,
+                        technoligies,
+                        websiteLink,
+                        gitHubLink,
+                        image: null
+                    })
+                })
+            }, () => {
+                /* 
+                    Dans le cas où une image n'a pas été choisi pour le projet,
+                    nous enregistrons ce dernier quand-même
+                */
+                savePortfolio({
+                    titre,
+                    description,
+                    technoligies,
+                    websiteLink,
+                    gitHubLink,
+                    image: null  // Là, nous pouvons bien choisir une image par défaut
+                })
+            }
+        )
     }
+
+    // Méthode de sauvegarde de notre portfolio
+    const savePortfolio = (portfolio) => {
+        console.log(portfolio);
+    }
+
+
     return (
         <div className="dashboard">
             <form ref={fromulaire} onSubmit={soumissionPortfolio}>

@@ -6,6 +6,8 @@
 // SDK ~ Software Development Kits | Kits de Developpement de Logiciel
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getStorage } from 'firebase/storage';
+import { getFirestore } from 'firebase/firestore/lite';
 // Pour ce faire, nous ajoutons les SDKs pour les produits Firebase que nous souhaitons  utiliser
 // # Lien
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,5 +28,9 @@ const app = initializeApp(firebaseConfig);
 // Création de la méthode de Connexion
 export const auth = getAuth(); //Fourniseur d'authentification
 const provider = new GoogleAuthProvider();
+// Création de notre base de données qui contiendra toutes nos collections de données
+export const db = getFirestore(app);
+// Créons un espace de stockage pour les images de nos projets
+export const stockage = getStorage(app);
 
 export const signInWithGoogle = () => signInWithPopup(auth, provider);
