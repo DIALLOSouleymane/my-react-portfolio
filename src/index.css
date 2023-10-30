@@ -84,8 +84,33 @@ button:hover {
   padding-top: 0;
 }
 
+
+
 @media screen and (max-width: 1200px) {
   body {
     overflow: visible;
   }
+
+  div.design-form,
+  div.container-connexion {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  .design-form .btn-left,
+  .design-form .btn-right,
+  .container-connexion .btn-connexion {  
+    float: none;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  div.design-form h1,
+div.container-connexion h1 {
+  text-align: center;
+}
+
+  
+
 }
