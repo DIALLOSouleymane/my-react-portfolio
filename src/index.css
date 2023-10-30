@@ -20,6 +20,14 @@ div.container-connexion {
     margin-left: 200px;
 }
 
+div.design-form h1,
+div.container-connexion h1 {
+  font-size: 40px;
+  font-family: "Coolvetica";
+  color: #ffd700;
+  font-weight: 400;
+}
+
 .design-form input[type='text'],
 .design-form label {
   width: 100%;
