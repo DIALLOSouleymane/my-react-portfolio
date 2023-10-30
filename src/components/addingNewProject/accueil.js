@@ -2,11 +2,24 @@ import { useRef } from "react";
 import { auth, db, stockage } from "../../myFirebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { addDoc, collection } from "firebase/firestore/lite";
+import AnimatedLetters from "../AnimatedLetters";
+/* import { useState } from "react";
+import { useEffect } from "react"; */
+import Loader from "react-loaders";
 
 
 const Home = () => {
     // Nous créons maintenant une référence au formulaire
     const fromulaire = useRef();
+
+    /* // Animation du titre :
+    const [letterClass, setLetterClass] = useState('text-animate');
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 3000) //animation 3s
+    }, []) */
 
     const soumissionPortfolio = (e) => {
         e.preventDefault();
@@ -17,6 +30,7 @@ const Home = () => {
         const gitHubLink = fromulaire.current[4]?.value;
         const image = fromulaire.current[5]?.files[0];
         // Nous récupérons le premier fichier attaché
+
         /* 
         if (fromulaire.current[5]?.files[0]){
               
@@ -93,17 +107,29 @@ const Home = () => {
 
 
     return (
-        <div className="dashboard">
+        <div className="design-form">
+            {/* <h1>
+                <AnimatedLetters
+                    letterClass={letterClass}
+                    strArray={"Ajout de nouveau projet ".split("")}
+                    index={15}
+                 />
+            </h1> */}
+            <h1>Ajout de nouveau projet</h1>
             <form ref={fromulaire}>
                 <p><input type="text" placeholder="Titre du projet : " /></p>
                 <p><textarea placeholder="Description du Projet : " /></p>
                 <p><input type="text" placeholder="Technologies utilisées : " /></p>
                 <p><input type="text" placeholder="Lien vers le site : " /></p>
                 <p><input type="text" placeholder="Lien du code source (GitHub) : " /></p>
-                <p><input type="file" placeholder="Image (aperçu) du projet" /></p>
-                <button type="submit" onClick={soumissionPortfolio}>Ajouter le projet</button>
-                <button onClick={() => auth.signOut()}>Se Déconnecter</button>
+                <p>
+                    <label for="fichier">Choisir une image : </label>
+                    <input id="fichier" type="file" />
+                </p>
+                <button className="btn-right" type="submit" onClick={soumissionPortfolio}>Ajouter le projet</button>
+                <button className="btn-left" onClick={() => auth.signOut()}>Se Déconnecter</button>
             </form>
+            <Loader type="pacman"/>
         </div>
     );
 }

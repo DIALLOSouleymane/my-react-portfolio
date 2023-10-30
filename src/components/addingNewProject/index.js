@@ -22,6 +22,10 @@ const Dashboard = () => {
 
     return (
         <div>
+            {/* 
+                Quand l'utilisateur s'authentifiera, on lui redirige vers la page d'accueil ;
+                cette dernière lui donnera la possibilité d'ajouter de nouveau projet
+            */}
             {user ? <Home /> : <Connexion />}
         </div>
     );

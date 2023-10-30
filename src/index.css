@@ -13,9 +13,67 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.dashboard {
-  margin-top: 200px;
-  margin-left: 200px;
+div.design-form,
+div.container-connexion {
+    width: 40%;
+    margin-top: 90px;
+    margin-left: 200px;
+}
+
+.design-form input[type='text'],
+.design-form label {
+  width: 100%;
+  border: 0;
+  background: #115173;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+
+.design-form label {
+  width: 50%;
+}
+
+.design-form textarea {
+  width: 100%;
+  border: 0;
+  background: #115173;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+
+.design-form button,
+.container-connexion button {
+  color: #ffd700;
+  background: 0 0;
+  font: 11px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 1px solid #ffd700;
+  float: right;
+  border-radius: 4px;
+}
+
+.design-form .btn-left,
+.container-connexion .btn-connexion {
+  float: left;
+}
+
+
+
+button:hover {
+  background: #ffd700;
+  color: #fff;
+}
+
+.design-form p {
+  padding-top: 0;
 }
 
 @media screen and (max-width: 1200px) {
