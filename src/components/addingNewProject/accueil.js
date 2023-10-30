@@ -123,7 +123,7 @@ const Home = () => {
                 <p><input type="text" placeholder="Lien vers le site : " /></p>
                 <p><input type="text" placeholder="Lien du code source (GitHub) : " /></p>
                 <p>
-                    <label for="fichier">Choisir une image : </label>
+                    <label htmlFor="fichier">Choisir une image : </label>
                     <input id="fichier" type="file" />
                 </p>
                 <button className="btn-right" type="submit" onClick={soumissionPortfolio}>Ajouter le projet</button>
