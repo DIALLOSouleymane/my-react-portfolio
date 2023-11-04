@@ -141,10 +141,20 @@
         }
 
         .image-box {
-            height: 250px;
+            height: 350px;
             // min-width: calc(40% - 10px);
             min-width: 200px;
             max-width: calc(50% - 20px);
+        }
+
+        @media screen and (max-width: 500px) {
+            .image-box {
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 100%;
+                width: 100%;
+                min-width: 90%;
+            }
         }
     }
 }
