@@ -1,0 +1,28 @@
+  .container-fluid {
+    width: 73%;
+    margin: 0 auto;
+  }
+  
+.container-item {
+    height: 480px;
+}
+  
+.container-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+// Gestion de la responsivité
+
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    width: 100%;
+  }
+
+  .container-item {
+    height: fit-content;
+  }
+}
+
+
