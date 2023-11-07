@@ -80,8 +80,11 @@
     top: 0%;
     right: 0%;
     z-index: 999999; //notre map doit etre au dessus de tout !
-    width: 200px;
-    height: 210px;
+    /* width: 200px;
+    height: 210px; */
+    // Nous voulons que info-map ait la taille de contenu
+    width: fit-content;
+    height: fit-content;
     padding: 20px;
     color: #fff;
     font-family: 'Helvetica';

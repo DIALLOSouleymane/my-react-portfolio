@@ -93,6 +93,11 @@
                 content: 'PORTFOLIO';
             }
         }
+        a.activities-link {
+            &:after {
+                content: 'ACTIVITIES';
+            }
+        }
 
         a.active {
             svg {
@@ -145,64 +150,64 @@
             // Là, nous ne voulons plus afficher les liens vers nos réseaux
             //  sociaux sur les petits écrans
         }
-    }
 
-    nav {
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #181818;
-        height: 100%;
-        margin: 0;
-        z-index: 2;
-        position: fixed;
-
-
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #181818;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
     
-        a:after {
-            opacity: 1;
-            position: initial;
-            width: auto;
-            margin-left: 10px;
-        }
-
-        /* a svg {
-            // Nous voulons ici ajouter du texte dynamiquement à coté des icones
-            // Sans les faire disparaitre totalement comme sur les grans écrans
-            opacity: 0.2 !important;
-        } */
-        a {
-            &:hover {
-                color: #ffd700;
     
-                svg {
-                    opacity: 0.3 !important;
-                }
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10px;
+            }
     
-                &:after {
-                    opacity: 1;
+            /* a svg {
+                // Nous voulons ici ajouter du texte dynamiquement à coté des icones
+                // Sans les faire disparaitre totalement comme sur les grans écrans
+                opacity: 0.2 !important;
+            } */
+            a {
+                &:hover {
+                    color: #ffd700;
+        
+                    svg {
+                        opacity: 0.3 !important;
+                    }
+        
+                    &:after {
+                        opacity: 1;
+                    }
                 }
             }
+    
+            &.mobile-show {
+                display: block;
+            }
         }
-
-        &.mobile-show {
+    
+        .hamburger-icon,
+        .close-mobile-navBar {
             display: block;
+            position: absolute;
+            // Nous la plaçons au coté supérieur droit
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
         }
-    }
 
-    .hamburger-icon,
-    .close-mobile-navBar {
-        display: block;
-        position: absolute;
-        // Nous la plaçons au coté supérieur droit
-        top: 15px;
-        right: 15px;
-        cursor: pointer;
     }
-
   }

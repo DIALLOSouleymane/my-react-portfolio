@@ -1,6 +1,16 @@
   .container-fluid {
     width: 73%;
     margin: 0 auto;
+
+    /* 
+      Animation du texte de description des images : 
+      Nous retardons las détails de l'image d'une durée d'une seconde (1s)
+    */ 
+    button,
+    h3,
+    p {
+      animation: fadeIn 1s 1s backwards;
+    }
   }
   
 .container-item {

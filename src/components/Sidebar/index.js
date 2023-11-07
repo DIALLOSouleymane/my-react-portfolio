@@ -4,7 +4,7 @@ import LogoS from '../../assets/images/logo-s.png';
 import LogoSubtitle from '../../assets/images/my-name.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faClose, faEnvelope, faHome, faSuitcase, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faStudiovinari } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 
 const Sidebar = () => {
@@ -39,6 +39,10 @@ const Sidebar = () => {
                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact"
                     onClick={() => setShowNav(false)}>
                     <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
+                </NavLink>
+                <NavLink exact="true" activeclassname="active" className="activities-link" to="/activities"
+                    onClick={() => setShowNav(false)}>
+                    <FontAwesomeIcon icon={faStudiovinari} color='#4d4d4e' />
                 </NavLink>
                 {/* 
                     Mise en place d'une icone de fermeture du menu, une fois ouvert
