@@ -1,32 +1,40 @@
-  .container-fluid {
+.slide-container {
     width: 73%;
-    margin: 0 auto;
+    height: 80%;
+    margin: auto;
+
+    .container-item {
+        height: 80%;
+      }
 
     /* 
       Animation du texte de description des images : 
       Nous retardons las détails de l'image d'une durée d'une seconde (1s)
     */ 
-    button,
-    h3,
-    p {
-      animation: fadeIn 1s 1s backwards;
-    }
+    // button,
+    // h3,
+    // p {
+    //   animation: fadeIn 1s 1s backwards;
+    // }
+    // img {
+    //     height: inherit;
+    //     object-fit: cover;
+    //     // filter: brightness(0.6);
+    // }
+
+    // .carousel-item {
+    //     height: ;
+    // }
   }
   
-.container-item {
-    height: 480px;
-}
+
   
-.container-img {
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
-}
+
 
 // Gestion de la responsivité
 
 @media screen and (max-width: 1200px) {
-  .container-fluid {
+  .slide-container {
     width: 100%;
   }
 
@@ -34,5 +42,89 @@
     height: fit-content;
   }
 }
+
+// .carousel {
+//     width:900px;
+//     // height:00px;
+//     margin: auto;
+
+//     img {
+//         width: 100%;
+//         height: 100%;
+//         // position: absolute;
+//         object-fit: cover;
+//     }
+// }
+
+// .carousel-inner {
+//     // height: 0;
+//     padding-bottom: 80%; /* this sets carousel aspect ratio (4:1 here) */
+//   }
+  
+//   .carousel-item {
+//     position: absolute !important; /* Bootstrap is insistent */
+//     // top: 0;
+//     // right: 0;
+//     // bottom: 0;
+//     // left: 0;
+//   }
+  
+//   .carousel-item img {
+//     height: 100%; /* Bootstrap handles width already */
+//     object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+//   }
+
+// Personalisation de nos buttons 
+// .carousel .carousel-indicators button {
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 50%;
+// } 
+
+// body {
+//     // regle temporaire
+//     overflow: visible;
+// }
+
+//   .container-fluid {
+//     width: 73%;
+//     margin: 0 auto;
+
+//     /* 
+//       Animation du texte de description des images : 
+//       Nous retardons las détails de l'image d'une durée d'une seconde (1s)
+//     */ 
+//     button,
+//     h3,
+//     p {
+//       animation: fadeIn 1s 1s backwards;
+//     }
+//   }
+  
+// .container-item {
+//     height: 480px;
+// }
+  
+// .container-img {
+//     height: 100%;
+//     object-fit: cover;
+//     filter: brightness(0.6);
+// }
+
+// body {
+//   overflow: visible;
+// }
+
+// Gestion de la responsivité
+
+// @media screen and (max-width: 1200px) {
+//   .container-fluid {
+//     width: 100%;
+//   }
+
+//   .container-item {
+//     height: fit-content;
+//   }
+// }
 
 

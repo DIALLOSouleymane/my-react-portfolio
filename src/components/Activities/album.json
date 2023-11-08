@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-react-portfolio-database.appspot.com/o/social-activities-photos%2FDSC08610.JPG?alt=media&token=32ff5b20-d37f-4f43-8b93-6d36591ac5a0&_gl=1*975fuh*_ga*MTY4MDM0OTUwOC4xNjk4NTE0NTM5*_ga_CW55HF8NVT*MTY5OTM2MTIzNC4xMC4xLjE2OTkzNjE1MTAuMTYuMC4w",
+        "titre": "Conseil d'administration",
+        "description": "Mise en place du bureau du conseil d'administration de l'Université Amadou Makhtar MBOW de DAKAR"
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-react-portfolio-database.appspot.com/o/social-activities-photos%2FDSC08615.JPG?alt=media&token=5cded8c6-d73a-4d4e-b262-e9b995712e94&_gl=1*12597fc*_ga*MTY4MDM0OTUwOC4xNjk4NTE0NTM5*_ga_CW55HF8NVT*MTY5OTM2MTIzNC4xMC4xLjE2OTkzNjE5MDAuNjAuMC4w",
+        "titre": "Conseil d'administration",
+        "description": "Mise en place du bureau du conseil d'administration de l'Université Amadou Makhtar MBOW de DAKAR"
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-react-portfolio-database.appspot.com/o/social-activities-photos%2FDSC08577.JPG?alt=media&token=bef2218b-1d4b-4f8e-8a0d-c75ee1e1dc42",
+        "titre": "Election du Président du conseil",
+        "description": "Election du nouveau patron du conseil d'administration de l'Université Amadou Makhtar MBOW de DAKAR"
+    },
+    {
+        "id": 4,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-react-portfolio-database.appspot.com/o/social-activities-photos%2FDSC08603.JPG?alt=media&token=0de68fe8-af64-4b1b-b104-d0761fd3b62d",
+        "titre": "Président du Conseil d'administration",
+        "description": "Le nouveau patron du conseil d'administration de l'Université Amadou Makhtar MBOW de DAKAR"
+    },
+    {
+        "id": 5,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/my-react-portfolio-database.appspot.com/o/social-activities-photos%2Fc8_appel_video.png?alt=media&token=c6e67153-a0e5-4405-afbb-de713d28bc94",
+        "titre": "Téléphonie sur IP",
+        "description": "Configuration de la téléphonie sur IP - 2022"
+    }
+]
