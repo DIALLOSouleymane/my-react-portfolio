@@ -69,7 +69,7 @@ const MyPorfolio = () => {
     } 
     return (
         <>
-            <div className="container portfolio-page">
+            <div className="conteneur portfolio-page">
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}

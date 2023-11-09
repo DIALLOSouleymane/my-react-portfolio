@@ -1,7 +1,6 @@
 .portfolio-page {
     padding-left: 100px;
     padding-right: 50px;
-    width: calc(100% - 150px);
     position: initial;
     height: 100%;
     overflow: auto; //activation automatique du scrollbar
@@ -129,7 +128,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .container.portfolio-page {
+    .conteneur.portfolio-page {
         width: 100%;
         padding: 20px;
         box-sizing: border-box;
