@@ -52,25 +52,25 @@ const Contact = () => {
                          />
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto blanditiis
-                        expedita nostrum eaque, quaerat molestiae velit unde corporis facere, magni
-                        officia saepe, consequatur atque voluptatibus. Blanditiis quis reiciendis 
-                        quibusdam aliquid!
+                        Naturellement je suis intéressé par tous les domaines qui touchent la technologie.
+                        Je suis très ouvert et prêt à relever de nouveaux défis.
+                        N'hésitez surtout pas à me contacter pour vos ambitieux projets ou pour toute autre 
+                        requête. Vous pouvez à cet effet utiliser directement le formulaire ci-dessous :
                     </p>
                     <div className='contact-form'>
                         <form ref={refForm} onSubmit={sendEmail}>
                             <ul>
                                 <li className='half'>
-                                    <input type='text' name='name' placeholder='Votre Prénom & Nom' required />
+                                    <input type='text' name='name' placeholder='Votre Prénom & Nom : ' required />
                                 </li>
                                 <li className='half'>
-                                    <input type='email' name='email' placeholder='Votre Email' required />
+                                    <input type='email' name='email' placeholder='Votre Email :' required />
                                 </li>
                                 <li>
-                                    <input type='text' name='subject' placeholder='Sujet' required />
+                                    <input type='text' name='subject' placeholder='Sujet : ' required />
                                 </li>
                                 <li>
-                                    <textarea name='message' placeholder='Votre message' required>
+                                    <textarea name='message' placeholder='Votre message : ...' required>
 
                                     </textarea>
                                 </li>

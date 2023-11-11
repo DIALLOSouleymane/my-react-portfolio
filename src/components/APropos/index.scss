@@ -1,3 +1,19 @@
+.text-zone  {
+    p {
+        font-size: 12px;
+    }
+
+    p .technologies {
+        color: #ffd700;
+    }
+
+    p a {
+        display: inline-block;
+        color: #ffd700;
+        margin-left: 4px;
+    }
+}
+ 
  .stage-cube-cont {
     width: 50%;
     height: 100%;

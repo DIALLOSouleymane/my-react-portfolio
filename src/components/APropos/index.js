@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
+import monCV from '../../assets/docs/_CV_fr_SouleymaneDiallo_November2023.pdf';
 
 const About = () => {
     
@@ -27,11 +28,36 @@ const About = () => {
                     />
                 </h1>
                 <p>
-                    Je suis un développeur frontend junior très ambitieux. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aut recusandae, ut expedita animi, eaque, unde soluta modi ratione hic odio explicabo ipsum quis dicta neque perferendis. Quos, incidunt quas.
+                    Curieux, Dynamique et Autonome, je suis un développeur dévoué et très ambitieux.
+                    Passionné d'informatique depuis tout petit, l'enseignement supérieur m'a permis 
+                    de m'orienter dans ce vaste domaine plein d'opportunités, d'innovations et 
+                    de solutions prometteuses.
                 </p>
                 <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aut recusandae, ut expedita animi, eaque, unde soluta modi ratione hic odio explicabo ipsum quis dicta neque perferendis. Quos, incidunt quas.
+                    Après trois semestres de classe préparatoire avec une solide base en algorithmique,
+                    Je me suis très vite tourné vers le développement.<br />
+                    J'utilise des technologies telles que <span className='technologies'>HTML5</span>, 
+                    <span className='technologies'> CSS3</span>, <span className='technologies'>JavaScript</span>,
+                    <span className='technologies'> React JS</span>, <span className='technologies'> Angular</span>, 
+                    <span className='technologies'> TypeScript</span>, <span className='technologies'> Bootstrap</span>, 
+                    <span className='technologies'> SQL</span>, <span className='technologies'>Java</span>, <span className='technologies'> Python</span>, 
+                    <span className='technologies'> Git</span>, etc.
+                </p>
+                <p>
+                    Vous pouvez consulter mon profile  
+                    <a href='https://www.linkedin.com/in/souleymane-diallo-17591422a/'
+                        target='_blank'
+                        rel='noreferrer'
+                    >LinkedIn</a> 
+                    <a href='https://www.linkedin.com/in/souleymane-diallo-17591422a/'
+                        target='_blank'
+                        rel='noreferrer'
+                    >ici</a>. 
+                    Vous pouvez également consulter mon CV à partir de ce 
+                    <a href={monCV}
+                        target='_blank'
+                        rel='noreferrer'
+                    >lien</a>.
                 </p>
             </div>
 

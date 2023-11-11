@@ -55,7 +55,9 @@ const MyPorfolio = () => {
                                     <p className="description">{portfolioObject.description}</p>
                                     <h4 className="technologie">Technologies : {portfolioObject.technoligies}</h4> 
                                     {/* erreur de frappe : technoligies => technologies */}
-                                    <a className="lien-gitHub" href={portfolioObject.gitHubLink} target="_blank">
+                                    <a className="lien-gitHub" href={portfolioObject.gitHubLink} 
+                                        target="_blank"
+                                        rel='noreferrer'>
                                         <FontAwesomeIcon icon={faGithub} />
                                     </a>
                                     <button className="btn" onClick={() => window.open(portfolioObject.websiteLink)}>Voir</button>
